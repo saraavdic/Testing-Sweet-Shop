@@ -85,20 +85,28 @@ Total test cases implemented: **25**
 ## How to Run the Project
 
 ### Install dependencies
+```bash
 
-npm install  
+npm install
+```  
 
 ### Run all tests
+```bash
 
-npx playwright test  
+npx playwright test
+```
 
 ### Run with UI mode
+```bash
 
-npx playwright test --ui  
+npx playwright test --ui
+```
 
 ### View test report
+```bash
 
-npx playwright show-report  
+npx playwright show-report
+```
 
 ---
 
