@@ -17,28 +17,28 @@ The goal is to validate core functionalities such as navigation, cart operations
 * playwright.config.js – Playwright configuration  
 
 ## Implemented Test Cases
-* TC01 – Homepage loads successfully  
-* TC04 – Add product to cart  
-* TC07 – Invalid quantity submission (negative test)  
-* TC08 – Search form submission  
+* Homepage loads successfully  
+* Add product to cart  
+* Invalid quantity submission (negative test)  
+* Search form submission  
 
 ## Test Case Details
 
-### TC01 – Homepage Loads Successfully
+### Homepage Loads Successfully
 * Navigates to the Sweet Shop homepage  
 * Verifies that the URL loads correctly  
 
-### TC04 – Add Product to Cart
+### Add Product to Cart
 * Adds the first product to the cart  
 * Verifies that the cart icon becomes visible  
 
-### TC07 – Invalid Quantity Submission
+### Invalid Quantity Submission
 * Adds a product to the cart  
 * Enters an invalid quantity value (-5)  
 * Submits the cart update form  
 * Verifies quantity correction and error message visibility  
 
-### TC08 – Search Form Submission
+### Search Form Submission
 * Enters a product name into the search field  
 * Submits the search form  
 * Verifies URL contains search query  
