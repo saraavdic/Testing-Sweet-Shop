@@ -1,183 +1,67 @@
-# Automated Web Testing using Playwright & Page Object Model
+# Sweet Shop Playwright Automation Tests
 
-## Overview
+## Project Overview
+This project contains automated end-to-end tests for the **Sweet Shop** web application using **Playwright** and **Page Object Model (POM)** design pattern.  
+The goal is to validate core functionalities such as navigation, cart operations, form validation, and search.
 
-This project demonstrates automated web testing using **Playwright** and the **Page Object Model (POM)** design pattern. The goal is to perform both **functional testing** and **smoke testing** on a sample e-commerce application.
-
-The tested application is **SauceDemo**:  
-https://www.saucedemo.com/
-
-The project focuses on validating core user workflows such as authentication, product browsing, shopping cart actions, and the checkout process.
-
----
-
-## Technologies Used
-
-- Playwright  
-- JavaScript / TypeScript  
-- Page Object Model (POM)  
-- Node.js  
-- GitHub  
-
----
+## Tech Stack
+# Playwright  
+# JavaScript  
+# Node.js  
+# Page Object Model (POM)  
+# Automated Testing  
 
 ## Project Structure
+# tests/ – Contains Playwright test cases  
+# pages/ – Page Object classes (HomePage, CartPage)  
+# playwright.config.js – Playwright configuration  
 
-/pages  
-&nbsp;&nbsp;loginPage.js  
-&nbsp;&nbsp;inventoryPage.js  
-&nbsp;&nbsp;cartPage.js  
-&nbsp;&nbsp;checkoutPage.js  
+## Implemented Test Cases
+# TC01 – Homepage loads successfully  
+# TC04 – Add product to cart  
+# TC07 – Invalid quantity submission (negative test)  
+# TC08 – Search form submission  
 
-/tests  
-&nbsp;&nbsp;functionalTests.spec.js  
-&nbsp;&nbsp;smokeTests.spec.js  
+## Test Case Details
 
-playwright.config.js  
-package.json  
+### TC01 – Homepage Loads Successfully
+# Navigates to the Sweet Shop homepage  
+# Verifies that the URL loads correctly  
 
----
+### TC04 – Add Product to Cart
+# Adds the first product to the cart  
+# Verifies that the cart icon becomes visible  
 
-## Test Types
+### TC07 – Invalid Quantity Submission
+# Adds a product to the cart  
+# Enters an invalid quantity value (-5)  
+# Submits the cart update form  
+# Verifies quantity correction and error message visibility  
 
-### Smoke Tests
+### TC08 – Search Form Submission
+# Enters a product name into the search field  
+# Submits the search form  
+# Verifies URL contains search query  
+# Confirms search results are displayed  
 
-Smoke tests verify that the application is stable and that critical pages load correctly.
-
-Examples:
-- Login page loads  
-- Valid login works  
-- Inventory page elements exist  
-- Cart page loads  
-- Checkout page opens  
-
----
-
-### Functional Tests
-
-Functional tests validate full user scenarios.
-
-Covered features:
-- Login (valid, invalid, empty fields)  
-- Viewing inventory  
-- Sorting products  
-- Adding/removing items from cart  
-- Product details  
-- Checkout process  
-- Logout  
-
-Total test cases implemented: **25**
-
----
-
-## Example Test Scenarios
-
-- Login with valid credentials  
-- Add items to cart  
-- Remove items from cart  
-- Sort items by name and price  
-- Complete checkout  
-- Cancel checkout  
-- Logout  
-
----
-
-## How to Run the Project
-
-### Install dependencies
+## How to Run the Tests
+# Install dependencies  
 ```bash
-
 npm install
-```  
-
-### Run all tests
+```
+# Run all tests
 ```bash
-
 npx playwright test
 ```
-
-### Run with UI mode
-```bash
-
+# Run tests with UI mode
+``` bash
 npx playwright test --ui
 ```
 
-### View test report
-```bash
-
-npx playwright show-report
-```
-
----
-
-## Page Object Model (POM)
-
-The Page Object Model is used to:
-
-- Separate test logic from UI selectors  
-- Improve code reusability  
-- Make tests easier to maintain  
-- Increase readability  
-
-Each page (Login, Inventory, Cart, Checkout) has its own class with methods like:
-- login()  
-- addItemToCart()  
-- removeItem()  
-- checkout()  
-
----
-
-## Test Data
-
-Default credentials used:
-
-Username: standard_user  
-Password: secret_sauce  
-
----
-
-## Challenges & Solutions
-
-### Challenge
-
-Keeping selectors organized and stable.
-
-### Solution
-
-Used Page Object Model to centralize selectors and actions.
-
----
-
-### Challenge
-
-Handling navigation between pages.
-
-### Solution
-
-Explicit URL checks and Playwright assertions.
-
----
-
-## Contributors
-
-Students:
-- Lana Hasanbegović  
-- Hatidža Imamović  
-- Sara Avdić  
-- Esma Đuherić  
-- Hava Dedić  
-
-Professor:  
-Dr. Amina Seferagić  
-
----
-
-## Repository
-
-https://github.com/HatidzaImamovic/SE302_Project_Saucedemo  
-
----
-
-## Purpose of the Project
-
-This project was created for the course **Software Testing and Maintenance** at the **International University of Sarajevo** and serves as a practical demonstration of modern automated web testing practices using Playwright.
+#3# Notes
+# Tests follow best practices for maintainability
+# Negative testing is included for input validation
+# Project is part of SE302 – Software Testing and Maintenance coursework
+## Author
+# Sara Avdić
+# Software Engineering Student – International University of Sarajevo
